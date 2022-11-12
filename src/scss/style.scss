@@ -1,0 +1,100 @@
+
+// @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+@import "fonts";
+$milk: #fdfff4;
+$green: #889948;
+$beige: #BEA98A;
+$jetmono: 'JetBrains Mono', monospace;
+$font-family-base: 'JetBrains Mono', monospace;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $milk;
+    list-style: none;
+}
+a {
+    cursor: pointer;
+}
+html {
+    overflow-x: clip;
+}
+body {
+    pointer-events: all!important;
+    background-color: #ffffff;
+    overflow-x: clip;
+    margin: 0 auto;
+    font-family: $jetmono;    
+}
+body.stop-scrolling {
+    overflow: auto!important;
+}
+.container {
+    padding: 80px!important;
+    @media (max-width: 1200px) {
+        padding: 60px!important;
+    }
+    @media (max-width: 800px) {
+        padding: 40px!important;
+    }
+    @media (max-width: 600px) {
+        padding: 20px!important;
+    }
+    max-width: 1366px;
+    min-height: 100vh;
+}
+@mixin background-image-rule {
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.header{
+    background-image: url(../img/main_banner_dark.png);
+    @include background-image-rule;
+    & .container {
+        display: flex;
+        gap: 30px;
+        height: 100vh;
+    }
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+    }
+    &__descr{
+        font-size: 24px;
+    }
+}
+.about {
+    background-color: $green;
+    &__picture {
+        border-radius: 20px;
+        padding: 0;
+        overflow: hidden;
+        min-height: 240px;
+        max-height: 380px;
+        position: relative;
+        @media(max-width:900px) {
+            margin: 0 auto 30px;
+            max-height: 278px;
+        }
+        @media(max-width:578px) {
+            max-height: 500px;
+        }
+    }
+    &__img{
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+    &__article {
+        font-weight: 300;
+    }
+}
+.p-10 {
+    padding: 0 15px; 
+}
+

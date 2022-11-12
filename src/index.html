@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+    "title": "Главная"
+})
+<body>
+    @@include('html/header.html', {})
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="p-10 col-sm-4 col-6 ">
+                        <div class="about__picture img-rounded">
+                            <img src="@img/vertical_1.jpg" alt="vertical1" class="about__img img-fluid">
+                        </div>
+                    </div>                    
+                    <div class="col-sm-8 col-xs-12 p-10">
+                        <div class="about__text">
+                            <p class="h1 about__title">About</p>
+                            <article class="about__article">
+                                <p class="about__acticle-text">At Kitchen Comforts, we know the value of a home-cooked meal. Every dish we create is made fresh on-site, with ingredients sourced or harvested on the same day. We believe in slow cooking and meal-savoring - because good things take time.
+                                </p>
+                                <p class="about__acticle-text">Now that times have changed, we must adapt. With our new Cook-It-Yourself (CIY) Meal Kits, we bring the Kitchen Comfort experience straight to your doorstep. Inside, you'll find everything you need to recreate our beloved home-style meals: Easy to follow illustrated recipes, prepared ingredients, and even a QR code for real-time cooking videos to help you unleash your inner chef.</p>
+                                <p class="about__acticle-text">imes have changed, but our philosophy has not. We believe in the life-changing comfort of a good meal - and now you can cook it yourself!</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    @@include('html/footer.html', {})
+    <script src="@js/bootstrap.js"></script>
+    <script src="@js/app.js" type="module"></script>
+</body>
+</html>
