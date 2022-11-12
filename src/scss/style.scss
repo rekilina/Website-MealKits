@@ -55,9 +55,10 @@ body.stop-scrolling {
     background-image: url(../img/main_banner_dark.png);
     @include background-image-rule;
     & .container {
-        display: flex;
         gap: 30px;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     &__title {
         margin: 0;
@@ -71,14 +72,20 @@ body.stop-scrolling {
 .about {
     background-color: $green;
     &__picture {
-        border-radius: 20px;
+        // border-radius: 20px; //----------------ДОДЕЛАТЬ
         padding: 0;
         overflow: hidden;
         min-height: 240px;
-        max-height: 380px;
+        height: 100%;
+        max-height: 60vw;
         position: relative;
+        margin: 0 auto 30px;
+        max-width: 80%;
+        @media(max-width:1100px) {
+            max-height: 278px;
+            max-width: 100%;
+        }
         @media(max-width:900px) {
-            margin: 0 auto 30px;
             max-height: 278px;
         }
         @media(max-width:578px) {
@@ -92,9 +99,57 @@ body.stop-scrolling {
     }
     &__article {
         font-weight: 300;
+        width: 80%;
+        text-align: justify;
+        @media(max-width: 900px) {
+            width: 100%;
+        }
     }
 }
 .p-10 {
     padding: 0 15px; 
 }
-
+.row {
+    width: 100%;
+}
+.howItWorks {
+    background-image: url(../img/delivery.jpg);
+    @include background-image-rule;
+    .container {
+        height: 100vh;
+    }
+    &__circle {
+        border-radius: 50%;
+        background-color: $beige;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__items {
+        margin-top: 100px;
+        @media(max-width: 900px) {
+            margin-top: 80px;
+        }
+        @media(max-width: 768px) {
+            margin-top: 50px;
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin: 20px auto;
+        }
+    }
+    &__text {
+        @media (max-width: 578px) {
+            width: 80%;
+        }
+    }
+}

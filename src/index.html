@@ -8,14 +8,14 @@
     @@include('html/header.html', {})
     <main>
         <section class="about">
-            <div class="container">
+            <div class="container flex-row align-items-center">
                 <div class="row">
                     <div class="p-10 col-sm-4 col-6 ">
                         <div class="about__picture img-rounded">
                             <img src="@img/vertical_1.jpg" alt="vertical1" class="about__img img-fluid">
                         </div>
                     </div>                    
-                    <div class="col-sm-8 col-xs-12 p-10">
+                    <div class="col-sm-8 col-xs-12 p-10 flex-row align-items-center">
                         <div class="about__text">
                             <p class="h1 about__title">About</p>
                             <article class="about__article">
@@ -24,6 +24,41 @@
                                 <p class="about__acticle-text">Now that times have changed, we must adapt. With our new Cook-It-Yourself (CIY) Meal Kits, we bring the Kitchen Comfort experience straight to your doorstep. Inside, you'll find everything you need to recreate our beloved home-style meals: Easy to follow illustrated recipes, prepared ingredients, and even a QR code for real-time cooking videos to help you unleash your inner chef.</p>
                                 <p class="about__acticle-text">imes have changed, but our philosophy has not. We believe in the life-changing comfort of a good meal - and now you can cook it yourself!</p>
                             </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="howItWorks">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="howItWorks_title text-center display-1">Meal Kits</h1>
+                    </div>
+                </div>
+                <div class="row howItWorks__items">
+                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                        <div class="howItWorks__circle">
+                            <img class="howItWorks__circle-img" src="@img/web.svg" alt="web">
+                        </div>
+                        <div class="howItWorks__text text-center">
+                            Visit reallygreatsite.com to browse our available CIY Meal Kits.
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                        <div class="howItWorks__circle">
+                            <img class="howItWorks__circle-img" src="@img/delivery.svg" alt="delivery">
+                        </div>
+                        <div class="howItWorks__text text-center">
+                            Select your chosen Kit, input your delivery address, and pay securely online.
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                        <div class="howItWorks__circle">
+                            <img class="howItWorks__circle-img" src="@img/plate.svg" alt="plate">
+                        </div>
+                        <div class="howItWorks__text text-center">
+                            The CIY Meal Kit will be at your doorstep at your chosen time the following day.
                         </div>
                     </div>
                 </div>
