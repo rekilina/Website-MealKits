@@ -21,6 +21,11 @@ $time-link: .3s;
 }
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: $milk;
+    &:hover {
+        color: $milk;
+    }
 }
 .h3 {
     margin-bottom: 0;
@@ -45,12 +50,10 @@ body.stop-scrolling {
     }
     @media (max-width: 800px) {
         padding: 40px!important;
+        padding-bottom: 60px!important;
     }
-    @media (max-width: 600px) {
-        padding: 20px!important;
-    }
+
     max-width: 1366px;
-    min-height: 100vh;
 }
 @mixin background-image-rule {
     background-position: center bottom;
@@ -66,6 +69,7 @@ body.stop-scrolling {
         height: 100vh;
         display: flex;
         flex-direction: column;
+        min-height: 100vh;
     }
     &__title {
         margin: 0;
@@ -86,6 +90,7 @@ body.stop-scrolling {
         height: 0;
         overflow: hidden;
         position: relative;
+        margin-bottom: 50px;
     }
     &__img{
         position: absolute;
@@ -111,6 +116,9 @@ body.stop-scrolling {
 .howItWorks {
     background-image: url(../img/delivery.jpg);
     @include background-image-rule;
+    & .container {
+        min-height: 100vh;
+    }
     &__circle {
         border-radius: 50%;
         background-color: $beige;
@@ -152,6 +160,9 @@ body.stop-scrolling {
 }
 .pricing {
     background-color: $green;
+    & .col-sm-3 {
+        flex: 0 0 25%;
+    }
     &__items {
         display: flex;
         row-gap: 30px;
@@ -212,6 +223,10 @@ body.stop-scrolling {
 }
 .insidebox {
     background-color: $milk;
+    & .container {
+        display: flex;
+        align-items: center;
+    }
     &__image {
         border-radius: 20px;
         padding: 0;
@@ -252,6 +267,7 @@ body.stop-scrolling {
         }
         &-li {
             color: $black;
+            margin-bottom: 15px;
             &::before {
                 content: "\2022";
                 color: $black; 
@@ -272,12 +288,12 @@ body.stop-scrolling {
     display: inline-block;
     transition: $time-link;
     display: inline-block;
+    text-align: center;
     &:hover {
-        color: $milk;
         background-color: #889948;
     }
 }
-.reviews{
+.reviews {
     background-color: $beige;
     &__left{
         margin-bottom: 50px;
@@ -297,4 +313,80 @@ body.stop-scrolling {
 }
 .mealkits {
     background-color: $green;
+    &__subtitle {
+        @media (max-width:$sm) {
+            font-size: 12px;
+        }
+    }
+    &__items {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin: 80px auto 0 auto;
+    }
+    &__item {
+        background-color: $milk;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img {
+            height: 0;
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            & img {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &-descr {
+            color: $black;
+            text-align: center;
+            padding: 20px 0;
+        }
+        &-btn {
+            text-transform: uppercase;
+        }
+    }
+}
+.footer {
+    background-image: url(../img/footer_banner.jpg);
+    @include background-image-rule;
+    & .container {
+        min-height: 100vh;
+    }
+    &__item {
+        &-title {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 15px;
+            margin-top: 40px;
+        }
+        &-socials {
+            padding-left: 0;
+            & li {
+                margin-bottom: 5px;
+
+            }
+        }
+        &-location {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0;
+            flex-wrap: wrap;
+            text-align: left;
+            & li {
+                min-width: 200px;
+                margin-right: 30px;
+                margin-bottom: 5px;
+            }
+        }
+    }
 }
