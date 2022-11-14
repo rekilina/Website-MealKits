@@ -9,10 +9,10 @@
     <main>
         <section class="about">
             <div class="container flex-row align-items-center">
-                <div class="row">
+                <div class="row d-flex justify-content-center ">
                     <div class="p-10 col-sm-4 col-6 ">
-                        <div class="about__picture img-rounded">
-                            <img src="@img/vertical_1.jpg" alt="vertical1" class="about__img img-fluid">
+                        <div class="about__picture">
+                            <img src="@img/vertical_1.jpg" alt="vertical1" class="about__img">
                         </div>
                     </div>                    
                     <div class="col-sm-8 col-xs-12 p-10 flex-row align-items-center">
@@ -33,11 +33,11 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="howItWorks_title text-center display-1">Meal Kits</h1>
+                        <h1 class="howItWorks__title text-center display-1">Meal Kits</h1>
                     </div>
                 </div>
                 <div class="row howItWorks__items">
-                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                    <div class="col-sm-6 col-lg-4 col-12 howItWorks__items-item">
                         <div class="howItWorks__circle">
                             <img class="howItWorks__circle-img" src="@img/web.svg" alt="web">
                         </div>
@@ -45,7 +45,7 @@
                             Visit reallygreatsite.com to browse our available CIY Meal Kits.
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                    <div class="col-sm-6 col-lg-4 col-12 howItWorks__items-item">
                         <div class="howItWorks__circle">
                             <img class="howItWorks__circle-img" src="@img/delivery.svg" alt="delivery">
                         </div>
@@ -53,7 +53,7 @@
                             Select your chosen Kit, input your delivery address, and pay securely online.
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-12 howItWorks__items-item">
+                    <div class="col-sm-6 col-lg-4 col-12 howItWorks__items-item">
                         <div class="howItWorks__circle">
                             <img class="howItWorks__circle-img" src="@img/plate.svg" alt="plate">
                         </div>
@@ -64,7 +64,55 @@
                 </div>
             </div>
         </section>
-        
+        <section class="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="pricing__title display-1">PRICING</h1>
+                    </div>
+                </div>
+                <div class="row pricing__items">
+                    <div class="col-sm-3 col-6 pricing__item">
+                        <div class="pricing__item-wrapper">
+                            <img src="@img/meals1.jpg" alt="meals1" class="pricing__item-img">
+                            <div class="pricing__item-price">$10.00</div>
+                            <div class="pricing__item-text">
+                                <p class="pricing__item-descr">Comfort Congee</p>
+                                <p class="pricing__item-descr">Asian favourite</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6 pricing__item">
+                        <div class="pricing__item-wrapper">
+                            <img src="@img/meals2.jpg" alt="meals2" class="pricing__item-img">
+                            <div class="pricing__item-price">$10.00</div>
+                            <div class="pricing__item-text">
+                                <p class="pricing__item-descr">Comfort Congee</p>
+                                <p class="pricing__item-descr">Asian favourite</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6 pricing__item">
+                        <div class="pricing__item-wrapper">
+                            <img src="@img/meals3.jpg" alt="meals3" class="pricing__item-img">
+                            <div class="pricing__item-price">$10.00</div>
+                            <div class="pricing__item-text">
+                                <p class="pricing__item-descr">Comfort Congee</p>
+                                <p class="pricing__item-descr">Asian favourite</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="insidebox">
+            
+        </section>
+        <section class="reviews"></section>
+        <section class="meal-kits"></section>
     </main>
     @@include('html/footer.html', {})
     <script src="@js/bootstrap.js"></script>
