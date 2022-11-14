@@ -4,8 +4,12 @@
 $milk: #fdfff4;
 $green: #889948;
 $beige: #BEA98A;
+$black: #000000;
+$md: 768px;
+$sm: 576px;
 $jetmono: 'JetBrains Mono', monospace;
 $font-family-base: 'JetBrains Mono', monospace;
+$time-link: .3s;
 
 * {
     padding: 0;
@@ -17,6 +21,9 @@ $font-family-base: 'JetBrains Mono', monospace;
 }
 a {
     cursor: pointer;
+}
+.h3 {
+    margin-bottom: 0;
 }
 html {
     overflow-x: clip;
@@ -140,6 +147,9 @@ body.stop-scrolling {
         }
     }
 }
+.col-6 {
+    flex-basis: 50%;
+}
 .pricing {
     background-color: $green;
     &__items {
@@ -175,8 +185,12 @@ body.stop-scrolling {
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
-            color: #000000;
+            color: $black;
             background-color: $milk;
+            @media(max-width:400px) {
+                padding: 5px;
+                font-size: 10px;
+            }
         }
         &-text {
             bottom: 5%;
@@ -190,6 +204,97 @@ body.stop-scrolling {
             margin: 0;
             font-weight: 700;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+            @media(max-width:400px) {
+                font-size: 10px;
+            }
         }
     }
+}
+.insidebox {
+    background-color: $milk;
+    &__image {
+        border-radius: 20px;
+        padding: 0;
+        padding-bottom: 100%;
+        width: 100%;
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 50px;
+        &-img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__text {
+        &-title{
+            color: $black;
+            @media(max-width: $md) {
+                text-align: center!important;
+            }
+            @media(max-width: $sm) {
+                font-size: 20px;
+            }
+        }
+        @media(max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-list {
+            margin: 50px 0;
+            list-style: none;
+            @media(max-width: $sm) {
+                font-size: 11px;
+            }
+        }
+        &-li {
+            color: $black;
+            &::before {
+                content: "\2022";
+                color: $black; 
+                font-weight: bold; 
+                display: inline-block;
+                width: 1em; 
+                margin-left: -1em; 
+            }
+        }
+    }
+}
+.link {
+    text-decoration: none;
+    color: $milk;
+    background-color: $beige;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: $time-link;
+    display: inline-block;
+    &:hover {
+        color: $milk;
+        background-color: #889948;
+    }
+}
+.reviews{
+    background-color: $beige;
+    &__left{
+        margin-bottom: 50px;
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__item {
+        &-text {
+            margin-bottom: 20px;
+        }
+        &-site {
+            font-size: 1.1em;
+            margin-bottom: 80px;
+        }
+    }
+}
+.mealkits {
+    background-color: $green;
 }
